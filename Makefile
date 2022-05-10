@@ -70,7 +70,7 @@ $(BIN_DIR)/main.bin: $(BIN_DIR)/main.elf
 
 # Build An ELF 
 $(BIN_DIR)/main.elf: $(LINK_DIR)/$(LINKER) $(OBJS) $(BIN_DIR)/startup.o
-	$(LD) $(OPTFLAGS) -s $(LDFLAGS) $^ -o $@
+	$(CC) $(CFLAGS) -T $^ -o $@ -nostartfiles
 
 # Build Dependances
 $(BIN_DIR)/startup.o: $(START_DIR)/$(STARTUP)

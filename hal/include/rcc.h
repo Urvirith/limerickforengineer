@@ -92,8 +92,9 @@ typedef enum rcc_prediv {
 /* Public Functions */
 void rcc_sys_clk(RCC_TypeDef *ptr, RCC_SYSSrc src);
 void rcc_set_pll(RCC_TypeDef *ptr, RCC_PLLSrc src, RCC_PREDiv prediv, RCC_PLLMul pllmul);
-void rcc_write_ahb_enr(RCC_TypeDef *ptr, u32 val);
-void rcc_write_apb1_enr(RCC_TypeDef *ptr, u32 val);
-void rcc_write_apb2_enr(RCC_TypeDef *ptr, u32 val);
+void rcc_write_iopenr(RCC_TypeDef *ptr, u32 val);
+void rcc_write_ahbenr(RCC_TypeDef *ptr, u32 val);
+void rcc_write_apbenr1(RCC_TypeDef *ptr, u32 val);
+void rcc_write_apbenr2(RCC_TypeDef *ptr, u32 val);
 
 #endif /* RCC_H_ */

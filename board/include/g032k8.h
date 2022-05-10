@@ -46,7 +46,7 @@
 /* Serial Peripheral Interface */
 #define SPI1_BASE                   ((u32)0x40013000)
 #define SPI2_BASE                   ((u32)0x40003800)
-#define SPI2_BASE                   ((u32)0x40003C00)
+#define SPI3_BASE                   ((u32)0x40003C00)
 
 /* Controller Area Network Interface */
 #define CAN_BASE                    ((u32)0x40006400)
@@ -57,95 +57,80 @@
 #define NVIC_BASE                   ((u32)0xE000E100)
 
 /* Reset and Clock Control (RCC) */
-#define RCC_GPIOA_AHB2EN            BIT_0                               /* GPIOA Enable is located on AHB2 Board Bit 0 */
-#define RCC_GPIOB_AHB2EN            BIT_1                               /* GPIOB Enable is located on AHB2 Board Bit 1 */
-#define RCC_GPIOC_AHB2EN            BIT_2                               /* GPIOC Enable is located on AHB2 Board Bit 2 */
-#define RCC_GPIOD_AHB2EN            BIT_3                               /* GPIOD Enable is located on AHB2 Board Bit 3 */
-#define RCC_GPIOE_AHB2EN            BIT_4                               /* GPIOE Enable is located on AHB2 Board Bit 4 */
-#define RCC_GPIOF_AHB2EN            BIT_5                               /* GPIOE Enable is located on AHB2 Board Bit 4 */
+#define RCC_GPIOA_IOPENR            BIT_0                               /* GPIOA Enable is located on AHB2 Board Bit 0 */
+#define RCC_GPIOB_IOPENR            BIT_1                               /* GPIOB Enable is located on AHB2 Board Bit 1 */
+#define RCC_GPIOC_IOPENR            BIT_2                               /* GPIOC Enable is located on AHB2 Board Bit 2 */
+#define RCC_GPIOD_IOPENR            BIT_3                               /* GPIOD Enable is located on AHB2 Board Bit 3 */
+#define RCC_GPIOE_IOPENR            BIT_4                               /* GPIOE Enable is located on AHB2 Board Bit 4 */
+#define RCC_GPIOF_IOPENR            BIT_5                               /* GPIOE Enable is located on AHB2 Board Bit 4 */
 
 /* General Purpose I/O */
 /* NUCLEO BOARD PIN OUT SPECIFICS - NUCLEO - G031K8 */
-#define GPIOC_PIN7                  (u32)7                              /* USER GREEN LED on GPIO C Bus, Pin 7  */
-#define LED_GRN_PIN                 GPIOC_PIN7                          /* USER GREEN LED on GPIO C Bus, Pin 7  */
-#define LED_GRN                     BIT_7                               /* USER GREEN LED on GPIO C Bus, Pin 7  */
-#define GPIOB_PIN7                  (u32)7                              /* USER BLUE LED on GPIO B Bus, Pin 7   */
-#define LED_BLU_PIN                 GPIOB_PIN7                          /* USER BLUE LED on GPIO B Bus, Pin 7   */
-#define LED_BLU                     BIT_7                               /* USER BLUE LED on GPIO B Bus, Pin 7   */
-#define GPIOA_PIN9                  (u32)9                              /* USER RED LED on GPIO A Bus, Pin 9    */
-#define LED_RED_PIN                 GPIOA_PIN9                          /* USER RED LED on GPIO A Bus, Pin 9    */
-#define LED_RED                     BIT_9                               /* USER RED LED on GPIO A Bus, Pin 9    */
+#define GPIOC_PIN6                  (u32)6                              /* USER GREEN LED on GPIO C Bus, Pin 7  */
+#define LED_GRN_PIN                 GPIOC_PIN6                          /* USER GREEN LED on GPIO C Bus, Pin 7  */
+#define LED_GRN                     BIT_6                               /* USER GREEN LED on GPIO C Bus, Pin 7  */
 
-/* PWM Motor Driver Pins */
-#define GPIOF_PIN7                  (u32)7                              /* USER PIN on GPIO F Bus, Pin 7        */
-#define GPIOF_PIN8                  (u32)8                              /* USER PIN on GPIO F Bus, Pin 8        */
-#define GPIOF_PIN9                  (u32)9                              /* USER PIN on GPIO F Bus, Pin 9        */
-#define GPIOE_PIN2                  (u32)2                              /* USER PIN on GPIO E Bus, Pin 2       */
-#define AXIS_ENABLE                 GPIOE_PIN2
-#define DIR_Z_AXIS                  GPIOF_PIN8
-#define DIR_Y_AXIS                  GPIOF_PIN7
-#define DIR_X_AXIS                  GPIOF_PIN9
-#define AXIS_ENABLE_PIN             BIT_2
-#define DIR_Z_AXIS_PIN              BIT_8
-#define DIR_Y_AXIS_PIN              BIT_7
-#define DIR_X_AXIS_PIN              BIT_9
+#define GPIOA_PIN11                 (u32)11
+#define LED_BLB_PIN                 GPIOA_PIN11
+#define LED_BLB                     BIT_11
 
-/* TIMER3 PWM CH1 */
-#define GPIOE_PIN3                  (u32)3                              /* PWM TIMER 3 on GPIO E Bus, Pin 3   */
-#define TIM3_PWM1_PIN               GPIOE_PIN3                          /* PWM TIMER 3 on GPIO E Bus, Pin 3   */
-#define TIM3_PWM1_AF                AF2                                 /* PWM TIMER 3 on GPIO E Bus, Pin 3   */
+#define GPIOA_PIN12                 (u32)12
+#define LED_BLF_PIN                 GPIOA_PIN12
+#define LED_BLF                     BIT_12
 
-/* TIMER3 PWM CH2 */
-#define GPIOE_PIN4                  (u32)4                              /* PWM TIMER 3 on GPIO E Bus, Pin 4   */
-#define TIM3_PWM2_PIN               GPIOE_PIN4                          /* PWM TIMER 3 on GPIO E Bus, Pin 4   */
-#define TIM3_PWM2_AF                AF2                                 /* PWM TIMER 3 on GPIO E Bus, Pin 4   */
+#define GPIOA_PIN5                  (u32)5
+#define LED_BBL_PIN                 GPIOA_PIN5
+#define LED_BBL                     BIT_5
 
-/* TIMER3 PWM CH3 */
-#define GPIOE_PIN5                  (u32)5                              /* PWM TIMER 3 on GPIO E Bus, Pin 5   */
-#define TIM3_PWM3_PIN               GPIOE_PIN5                          /* PWM TIMER 3 on GPIO E Bus, Pin 5   */
-#define TIM3_PWM3_AF                AF2                                 /* PWM TIMER 3 on GPIO E Bus, Pin 5   */
+#define GPIOA_PIN4                  (u32)4
+#define LED_BFL_PIN                 GPIOA_PIN4
+#define LED_BFL                     BIT_4
 
-/* TIMER3 PWM CH4 */
-#define GPIOE_PIN6                  (u32)6                              /* PWM TIMER 3 on GPIO E Bus, Pin 6   */
-#define TIM3_PWM4_PIN               GPIOE_PIN6                          /* PWM TIMER 3 on GPIO E Bus, Pin 6   */
-#define TIM3_PWM4_AF                AF2                                 /* PWM TIMER 3 on GPIO E Bus, Pin 6   */
+#define GPIOA_PIN1                  (u32)1
+#define LED_ML_PIN                  GPIOA_PIN1
+#define LED_ML                      BIT_1
+
+/* Top Left */
+#define GPIOA_PIN0                  (u32)0
+#define LED_TL_PIN                  GPIOA_PIN0
+#define LED_TL                      BIT_0
+
+/* Top Back */
+#define GPIOB_PIN4                  (u32)4
+#define LED_TB_PIN                  GPIOB_PIN4
+#define LED_TB                      BIT_4
+
+/* Top Front */
+#define GPIOB_PIN5                  (u32)5
+#define LED_TF_PIN                  GPIOB_PIN5
+#define LED_TF                      BIT_5
+
+/* Middle Front */
+#define GPIOB_PIN9                  (u32)9
+#define LED_MF_PIN                  GPIOB_PIN9
+#define LED_MF                      BIT_9
+
+/* Middle Back */
+#define GPIOA_PIN8                  (u32)8
+#define LED_MB_PIN                  GPIOA_PIN8
+#define LED_MB                      BIT_8
 
 /* Timer */
-#define RCC_TIMER2_APB1R1EN         BIT_0
-#define RCC_TIMER3_APB1R1EN         BIT_1
-#define RCC_TIMER4_APB1R1EN         BIT_2
+#define RCC_TIMER2_APBENR1          BIT_0
+#define RCC_TIMER3_APBENR1          BIT_1
+#define RCC_TIMER4_APBENR1          BIT_2
 
 /* USART (Universal Synchronous and Asynchronous Receiver Transmitter) */
-#define RCC_USART3_APB1R1EN         BIT_18
-#define GPIOD_PIN8                  (u32)8                              /* GPIO Bus D Pin 8 TX - D1   */
-#define GPIOD_PIN9                  (u32)9                              /* GPIO Bus D Pin 9 RX - D0   */
-#define USART3_TX                   GPIOD_PIN8
-#define USART3_RX                   GPIOD_PIN9
+#define RCC_USART1_APBENR2          BIT_14
+#define GPIOB_PIN6                  (u32)6                              /* GPIO Bus D Pin 8 TX - D1   */
+#define GPIOB_PIN7                  (u32)7                              /* GPIO Bus D Pin 9 RX - D0   */
+#define USART1_TX                   GPIOB_PIN6
+#define USART1_RX                   GPIOB_PIN7
 
 /* GPIO SETUP */
 #define USART_MODE                  Gpio_Alternate
 #define USART_OTYPE                 Gpio_Push_Pull
 #define USART_AF                    AF7
-
-/* SPI (Serial Peripheral Interface) */
-/* SPI 1*/
-/* RCC */
-#define RCC_SPI1_APB2REN            BIT_12
-#define GPIOB_PIN4                  (u32)4                              /* GPIO Bus B Pin 4 MISO  */
-#define GPIOB_PIN5                  (u32)5                              /* GPIO Bus B Pin 5 MOSI  */
-#define GPIOB_PIN3                  (u32)3                              /* GPIO Bus B Pin 3 SCK   */
-#define GPIOA_PIN4                  (u32)4                              /* GPIO Bus A Pin 4 NSS   */
-#define GPIOA_PIN7                  (u32)7                              /* GPIO Bus A Pin 7 SS - D11  */
-#define SPI1_MISO                   GPIOB_PIN4
-#define SPI1_MOSI                   GPIOB_PIN5
-#define SPI1_SCK                    GPIOB_PIN3
-#define SPI1_NSS                    GPIOA_PIN4
-#define SPI1_SS                     GPIOA_PIN7                          /* This Is An Input */
-
-/* GPIO SETUP */
-#define SPI_MODE                    Gpio_Alternate
-#define SPI_OTYPE                   Gpio_Push_Pull
-#define SPI_AF                      AF5
 
 enum nvic_irq {
     WWDG_IRQ,                       /*  0       Window Watchdog */

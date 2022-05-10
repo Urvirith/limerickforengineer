@@ -38,7 +38,7 @@
 #define PREDIV_OFFSET   0
 
 /* Local Functions */
-static inline void rcc_set_prediv(RCC_TypeDef *ptr, RCC_PREDiv prediv);
+static inline void set_prediv(RCC_TypeDef *ptr, RCC_PREDiv prediv);
 
 /* Set system clock source */
 void rcc_sys_clk(RCC_TypeDef *ptr, RCC_SYSSrc src) {
@@ -65,19 +65,23 @@ void rcc_set_pll(RCC_TypeDef *ptr, RCC_PLLSrc src, RCC_PREDiv prediv, RCC_PLLMul
     };
 }
 
-void rcc_write_ahb_enr(RCC_TypeDef *ptr, u32 val) {
-    set_ptr_vol_bit_u32(&ptr->AHB_ENR, val);
+void rcc_write_iopenr(RCC_TypeDef *ptr, u32 val) {
+    set_ptr_vol_bit_u32(&ptr->IOPENR, val);
 }
 
-void rcc_write_apb1_enr(RCC_TypeDef *ptr, u32 val) {
-    set_ptr_vol_bit_u32(&ptr->APB1_ENR, val);
+void rcc_write_ahbenr(RCC_TypeDef *ptr, u32 val) {
+    set_ptr_vol_bit_u32(&ptr->AHBENR, val);
 }
 
-void rcc_write_apb2_enr(RCC_TypeDef *ptr, u32 val) {
-    set_ptr_vol_bit_u32(&ptr->APB2_ENR, val);
+void rcc_write_apbenr1(RCC_TypeDef *ptr, u32 val) {
+    set_ptr_vol_bit_u32(&ptr->APBENR1, val);
+}
+
+void rcc_write_apbenr2(RCC_TypeDef *ptr, u32 val) {
+    set_ptr_vol_bit_u32(&ptr->APBENR2, val);
 }
 
 /* Set PREDIV */
 static inline void set_prediv(RCC_TypeDef *ptr, RCC_PREDiv prediv) {
-    set_ptr_vol_u32(&ptr->CFGR2, PREDIV_OFFSET, PREDIV_MASK, prediv);
+    set_ptr_vol_u32(&ptr->CFGR, PREDIV_OFFSET, PREDIV_MASK, prediv);
 }
