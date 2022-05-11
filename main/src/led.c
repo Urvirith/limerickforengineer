@@ -234,12 +234,12 @@ LED_Recipe_TypeDef led_template() {
     recipe.elms[19].time_ms = 1000;
     recipe.elms[19].prescale = recipe.elms[19].time_ms / 2;
     recipe.elms[19].leds.reg = recipe.elms[18].leds.reg;
-    recipe.elms[19].leds.fields.MIDDLE_LEFT = 1;
-    recipe.elms[19].leds.fields.MIDDLE_BACK = 1;
-    recipe.elms[19].leds.fields.MIDDLE_RIGHT = 1;
-    recipe.elms[19].leds.fields.MIDDLE_FRONT = 1;
+    recipe.elms[19].leds.fields.MIDDLE_LEFT = 0;
+    recipe.elms[19].leds.fields.MIDDLE_BACK = 0;
+    recipe.elms[19].leds.fields.MIDDLE_RIGHT = 0;
+    recipe.elms[19].leds.fields.MIDDLE_FRONT = 0;
 
-    recipe.elms[20].time_ms = 50;
+    recipe.elms[20].time_ms = 1000;
     recipe.elms[20].prescale = recipe.elms[20].time_ms / 2;
     recipe.elms[20].leds.reg = 0;
 

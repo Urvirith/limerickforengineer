@@ -35,21 +35,23 @@ extern void main() {
     u8 i = 0;
 
     while (1) {
-        if (timer_get_flag(TIMER2)) {
-            timer_clr_flag(TIMER2);
-            if (i >= recipe.cnt) {
-                i = 0;
-            }
-            
-
-            led_set(recipe.elms[i].leds);
-
-            timer_set_time(TIMER2, recipe.elms[i].time_ms, 16000, recipe.elms[i].prescale);
-            timer_start(TIMER2);
-            i += 1;
+        if (i >= recipe.cnt) {
+            i = 0;
         }
-    }
 
+        timer_set_time(TIMER2, recipe.elms[i].time_ms, 16000, recipe.elms[i].prescale);
+        timer_start(TIMER2);
+
+        while (!timer_get_flag(TIMER2)) {
+            // SPIN
+        }
+
+        timer_clr_flag(TIMER2);
+
+        led_set(recipe.elms[i].leds);
+
+        i += 1;
+    }
 }
 
 extern void TIM3_IRQHandler() {
