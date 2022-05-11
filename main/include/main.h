@@ -5,5 +5,13 @@
 #include "rcc.h"
 #include "gpio.h"
 #include "timer.h"
+#include "led.h"
+
+/* Define Memory Mapped I/O Used */
+#define RCC         ((RCC_TypeDef *)RCC_BASE)
+#define GPIOA       ((GPIO_TypeDef *)GPIOA_BASE)
+#define GPIOB       ((GPIO_TypeDef *)GPIOB_BASE)
+#define GPIOC       ((GPIO_TypeDef *)GPIOC_BASE)
+#define TIMER2      ((TIMER_TypeDef *)TIMER2_BASE)
 
 #endif /* MAIN_H_ */

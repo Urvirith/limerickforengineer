@@ -1,13 +1,6 @@
 /* Main Entry Of Program */
 #include "main.h"
 
-#define RCC         ((RCC_TypeDef *)RCC_BASE)
-#define GPIOA       ((GPIO_TypeDef *)GPIOA_BASE)
-#define GPIOB       ((GPIO_TypeDef *)GPIOB_BASE)
-#define GPIOC       ((GPIO_TypeDef *)GPIOC_BASE)
-#define TIMER2      ((TIMER_TypeDef *)TIMER2_BASE)
-
-
 /* Extern Keyword Allows To Be Call */
 extern void SystemInit() {
     rcc_write_iopenr(RCC, RCC_GPIOA_IOPENR);        // ENABLE GPIOA
@@ -17,64 +10,88 @@ extern void SystemInit() {
 }
 
 extern void main() {
+    /* GPIO Setup */
     gpio_type(GPIOC, LED_GRN_PIN, Gpio_Output, Gpio_Push_Pull, AF0);
-    gpio_type(GPIOA, LED_BLB_PIN, Gpio_Output, Gpio_Push_Pull, AF0);
-    gpio_type(GPIOA, LED_BLF_PIN, Gpio_Output, Gpio_Push_Pull, AF0);
-    gpio_type(GPIOA, LED_BBL_PIN, Gpio_Output, Gpio_Push_Pull, AF0);
-    gpio_type(GPIOA, LED_BFL_PIN, Gpio_Output, Gpio_Push_Pull, AF0);
-    gpio_type(GPIOA, LED_ML_PIN, Gpio_Output, Gpio_Push_Pull, AF0);
-    gpio_type(GPIOA, LED_TL_PIN, Gpio_Output, Gpio_Push_Pull, AF0);
-    gpio_type(GPIOB, LED_TB_PIN, Gpio_Output, Gpio_Push_Pull, AF0);
-    gpio_type(GPIOB, LED_TF_PIN, Gpio_Output, Gpio_Push_Pull, AF0);
-    gpio_type(GPIOB, LED_MF_PIN, Gpio_Output, Gpio_Push_Pull, AF0);
-    gpio_type(GPIOA, LED_MB_PIN, Gpio_Output, Gpio_Push_Pull, AF0);
+    led_setup();
 
+    LED_TypeDef leds;
+    leds.reg = 0;
 
     timer_open(TIMER2, Timer_Cont, Timer_Upcount);
-    timer_set_time(TIMER2, 1000, 16000, 1000);
+    timer_set_time(TIMER2, 200, 16000, 50);
     timer_start(TIMER2);
 
     u8 i = 0;
 
     while (1) {
         if (timer_get_flag(TIMER2)) {
-            if (i >= 10) {
+            if (i >= 20) {
+                leds.reg = 0;
                 i = 0;
             }
             
             if (i == 0) {
-                gpio_set_pin(GPIOA, LED_BLB);
-                gpio_clr_pin(GPIOA, LED_MB);
+                leds.fields.LOWER_LEFT_FRONT = 1;
             }  else if (i == 1) {
-                gpio_set_pin(GPIOA, LED_BLF);
-                gpio_clr_pin(GPIOA, LED_BLB);
+                leds.fields.LOWER_LEFT_BACK = 1;
             }  else if (i == 2) {
-                gpio_set_pin(GPIOA, LED_BBL);
-                gpio_clr_pin(GPIOA, LED_BLF);
+                leds.fields.LOWER_BACK_LEFT = 1;
             }  else if (i == 3) {
-                gpio_set_pin(GPIOA, LED_BFL);
-                gpio_clr_pin(GPIOA, LED_BBL);
+                leds.fields.LOWER_BACK_RIGHT = 1;
             }  else if (i == 4) {
-                gpio_set_pin(GPIOA, LED_ML);
-                gpio_clr_pin(GPIOA, LED_BFL);
+                leds.fields.LOWER_RIGHT_BACK = 1;
             }  else if (i == 5) {
-                gpio_set_pin(GPIOA, LED_TL);
-                gpio_clr_pin(GPIOA, LED_ML);
+                leds.fields.LOWER_RIGHT_FRONT = 1;
             } else if (i == 6) {
-                gpio_set_pin(GPIOB, LED_TB);
-                gpio_clr_pin(GPIOA, LED_TL);
+                leds.fields.LOWER_FRONT_RIGHT = 1;
             } else if (i == 7) {
-                gpio_set_pin(GPIOB, LED_TF);
-                gpio_clr_pin(GPIOB, LED_TB);
+                leds.fields.LOWER_FRONT_LEFT = 1;
             } else if (i == 8) {
-                gpio_set_pin(GPIOB, LED_MF);
-                gpio_clr_pin(GPIOB, LED_TF);
+                leds.reg = 0;
+                leds.fields.MIDDLE_LEFT = 1;
             } else if (i == 9) {
-                gpio_set_pin(GPIOA, LED_MB);
-                gpio_clr_pin(GPIOB, LED_MF);
+                leds.fields.MIDDLE_BACK = 1;
+            } else if (i == 10) {
+                leds.fields.MIDDLE_RIGHT = 1;
+            } else if (i == 11) {
+                leds.fields.MIDDLE_FRONT = 1;
+            } else if (i == 12) {
+                leds.reg = 0;
+                leds.fields.UPPER_LEFT = 1;
+            } else if (i == 13) {
+                leds.fields.UPPER_BACK = 1;
+            } else if (i == 14) {
+                leds.fields.UPPER_RIGHT = 1;
+            } else if (i == 15) {
+                leds.fields.UPPER_FRONT = 1;
+            } else if (i == 16) {
+                leds.reg = 0;
+                leds.fields.LOWER_LEFT_FRONT = 1;
+                leds.fields.LOWER_LEFT_BACK = 1;
+                leds.fields.LOWER_BACK_LEFT = 1;
+                leds.fields.LOWER_BACK_RIGHT = 1;
+                leds.fields.LOWER_RIGHT_BACK = 1;
+                leds.fields.LOWER_RIGHT_FRONT = 1;
+                leds.fields.LOWER_FRONT_RIGHT = 1;
+                leds.fields.LOWER_FRONT_LEFT = 1;
+            } else if (i == 17) {
+                leds.fields.MIDDLE_LEFT = 1;
+                leds.fields.MIDDLE_BACK = 1;
+                leds.fields.MIDDLE_RIGHT = 1;
+                leds.fields.MIDDLE_FRONT = 1;
+            } else if (i == 18) {
+                leds.fields.UPPER_LEFT = 1;
+                leds.fields.UPPER_BACK = 1;
+                leds.fields.UPPER_RIGHT = 1;
+                leds.fields.UPPER_FRONT = 1;
+            } else if (i == 19) {
+                leds.fields.MIDDLE_LEFT = 0;
+                leds.fields.MIDDLE_BACK = 0;
+                leds.fields.MIDDLE_RIGHT = 0;
+                leds.fields.MIDDLE_FRONT = 0;
             }
 
-
+            led_set(leds);
 
             sr_ptr_vol_bit_u32(&GPIOC->ODR, LED_GRN);
             timer_clr_flag(TIMER2);

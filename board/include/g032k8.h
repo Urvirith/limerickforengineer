@@ -70,40 +70,45 @@
 #define LED_GRN_PIN                 GPIOC_PIN6                          /* USER GREEN LED on GPIO C Bus, Pin 7  */
 #define LED_GRN                     BIT_6                               /* USER GREEN LED on GPIO C Bus, Pin 7  */
 
+/* Lower Left Back */
 #define GPIOA_PIN11                 (u32)11
-#define LED_BLB_PIN                 GPIOA_PIN11
-#define LED_BLB                     BIT_11
+#define LED_LLB_PIN                 GPIOA_PIN11
+#define LED_LLB                     BIT_11
 
+/* Lower Left Front */
 #define GPIOA_PIN12                 (u32)12
-#define LED_BLF_PIN                 GPIOA_PIN12
-#define LED_BLF                     BIT_12
+#define LED_LLF_PIN                 GPIOA_PIN12
+#define LED_LLF                     BIT_12
 
+/* Lower Back Left */
 #define GPIOA_PIN5                  (u32)5
-#define LED_BBL_PIN                 GPIOA_PIN5
-#define LED_BBL                     BIT_5
+#define LED_LBL_PIN                 GPIOA_PIN5
+#define LED_LBL                     BIT_5
 
+/* Lower Front Left */
 #define GPIOA_PIN4                  (u32)4
-#define LED_BFL_PIN                 GPIOA_PIN4
-#define LED_BFL                     BIT_4
+#define LED_LFL_PIN                 GPIOA_PIN4
+#define LED_LFL                     BIT_4
 
+/* Middle Left */
 #define GPIOA_PIN1                  (u32)1
 #define LED_ML_PIN                  GPIOA_PIN1
 #define LED_ML                      BIT_1
 
-/* Top Left */
+/* Upper Left */
 #define GPIOA_PIN0                  (u32)0
-#define LED_TL_PIN                  GPIOA_PIN0
-#define LED_TL                      BIT_0
+#define LED_UL_PIN                  GPIOA_PIN0
+#define LED_UL                      BIT_0
 
-/* Top Back */
+/* Upper Back */
 #define GPIOB_PIN4                  (u32)4
-#define LED_TB_PIN                  GPIOB_PIN4
-#define LED_TB                      BIT_4
+#define LED_UB_PIN                  GPIOB_PIN4
+#define LED_UB                      BIT_4
 
-/* Top Front */
+/* Upper Front */
 #define GPIOB_PIN5                  (u32)5
-#define LED_TF_PIN                  GPIOB_PIN5
-#define LED_TF                      BIT_5
+#define LED_UF_PIN                  GPIOB_PIN5
+#define LED_UF                      BIT_5
 
 /* Middle Front */
 #define GPIOB_PIN9                  (u32)9
@@ -114,6 +119,36 @@
 #define GPIOA_PIN8                  (u32)8
 #define LED_MB_PIN                  GPIOA_PIN8
 #define LED_MB                      BIT_8
+
+/* Upper Right */
+#define GPIOB_PIN8                  (u32)8
+#define LED_UR_PIN                  GPIOB_PIN8
+#define LED_UR                      BIT_8
+
+/* Lower Back Right */
+#define GPIOB_PIN2                  (u32)2
+#define LED_LBR_PIN                 GPIOB_PIN2
+#define LED_LBR                     BIT_2
+
+/* Middle Right */
+#define GPIOB_PIN0                  (u32)0
+#define LED_MR_PIN                  GPIOB_PIN0
+#define LED_MR                      BIT_0
+
+/* Lower Front Right */
+#define GPIOA_PIN9                  (u32)9
+#define LED_LFR_PIN                 GPIOA_PIN9
+#define LED_LFR                     BIT_9
+
+/* Lower Right Back */
+#define GPIOA_PIN10                 (u32)10
+#define LED_LRB_PIN                 GPIOA_PIN10
+#define LED_LRB                     BIT_10
+
+/* Lower Right Front */
+#define GPIOB_PIN1                  (u32)1
+#define LED_LRF_PIN                 GPIOB_PIN1
+#define LED_LRF                     BIT_1
 
 /* Timer */
 #define RCC_TIMER2_APBENR1          BIT_0
