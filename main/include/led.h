@@ -3,6 +3,8 @@
 
 #include "main.h"
 
+#define MAX_STEPS               (u32)30
+
 typedef union led_typedef {
     u16 reg;
     struct {
@@ -25,7 +27,19 @@ typedef union led_typedef {
     } fields;
 } LED_TypeDef;
 
+typedef struct led_recipe_elm_typedef {
+    u32 time_ms;
+    u32 prescale;
+    LED_TypeDef leds;
+} LED_Recipe_Elm_TypeDef;
+
+typedef struct led_recipe_typedef {
+    u32 cnt;
+    LED_Recipe_Elm_TypeDef elms[MAX_STEPS];
+} LED_Recipe_TypeDef;
+
 void led_setup();
 void led_set(LED_TypeDef leds);
+LED_Recipe_TypeDef led_template();
 
 #endif /* LED_H_ */

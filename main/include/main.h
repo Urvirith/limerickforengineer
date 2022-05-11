@@ -5,6 +5,7 @@
 #include "rcc.h"
 #include "gpio.h"
 #include "timer.h"
+#include "nvic.h"
 #include "led.h"
 
 /* Define Memory Mapped I/O Used */
@@ -13,5 +14,7 @@
 #define GPIOB       ((GPIO_TypeDef *)GPIOB_BASE)
 #define GPIOC       ((GPIO_TypeDef *)GPIOC_BASE)
 #define TIMER2      ((TIMER_TypeDef *)TIMER2_BASE)
+#define TIMER3      ((TIMER_TypeDef *)TIMER3_BASE)
+#define NVIC        ((NVIC_TypeDef *)NVIC_BASE)
 
 #endif /* MAIN_H_ */

@@ -219,3 +219,17 @@ void timer_set_pwm_ch4(TIMER_TypeDef *ptr) {
     clr_ptr_vol_bit_u32(&ptr->CCER, CC4P_BIT);
     clr_ptr_vol_bit_u32(&ptr->CCER, CC4NP_BIT);
 }
+
+void timer_ons_delay(TIMER_TypeDef *ptr, u32 time_us) {
+    timer_set_time(ptr, time_us, 16, 16);
+    timer_start(ptr);
+    timer_clr_flag(ptr);
+
+    while (!timer_get_flag(ptr)) {
+        // SPIN
+    }
+
+    timer_stop(ptr);
+    timer_clr_count(ptr);
+    timer_clr_flag(ptr);
+}
