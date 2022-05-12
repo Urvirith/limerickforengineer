@@ -245,3 +245,431 @@ LED_Recipe_TypeDef led_template() {
 
     return recipe;
 }
+
+
+LED_Recipe_TypeDef led_rain_fall() {
+    LED_Recipe_TypeDef recipe;
+    
+    recipe.cnt = 24;
+
+    recipe.elms[0].time_ms = 150;
+    recipe.elms[0].prescale = recipe.elms[0].time_ms / 2;
+
+    recipe.elms[0].leds.fields.UPPER_LEFT = 0;
+    recipe.elms[0].leds.fields.MIDDLE_LEFT = 0;
+    recipe.elms[0].leds.fields.LOWER_LEFT_FRONT = 0;
+    recipe.elms[0].leds.fields.LOWER_LEFT_BACK = 0;
+
+    recipe.elms[0].leds.fields.UPPER_BACK = 0;
+    recipe.elms[0].leds.fields.MIDDLE_BACK = 0;
+    recipe.elms[0].leds.fields.LOWER_BACK_LEFT = 0;
+    recipe.elms[0].leds.fields.LOWER_BACK_RIGHT = 0;
+
+    recipe.elms[0].leds.fields.UPPER_RIGHT = 0;
+    recipe.elms[0].leds.fields.MIDDLE_RIGHT = 0;
+    recipe.elms[0].leds.fields.LOWER_RIGHT_BACK = 0;
+    recipe.elms[0].leds.fields.LOWER_RIGHT_FRONT = 0;
+
+    recipe.elms[0].leds.fields.UPPER_FRONT = 0;
+    recipe.elms[0].leds.fields.MIDDLE_FRONT = 0;
+    recipe.elms[0].leds.fields.LOWER_FRONT_RIGHT = 0;
+    recipe.elms[0].leds.fields.LOWER_FRONT_LEFT = 0;
+
+    recipe.elms[1].time_ms = 150;
+    recipe.elms[1].prescale = recipe.elms[1].time_ms / 2;
+    
+    recipe.elms[1].leds.fields.UPPER_LEFT = 1;
+    recipe.elms[1].leds.fields.MIDDLE_LEFT = 0;
+    recipe.elms[1].leds.fields.LOWER_LEFT_FRONT = 0;
+    recipe.elms[1].leds.fields.LOWER_LEFT_BACK = 0;
+
+    recipe.elms[1].leds.fields.UPPER_BACK = 0;
+    recipe.elms[1].leds.fields.MIDDLE_BACK = 0;
+    recipe.elms[1].leds.fields.LOWER_BACK_LEFT = 0;
+    recipe.elms[1].leds.fields.LOWER_BACK_RIGHT = 0;
+
+    recipe.elms[1].leds.fields.UPPER_RIGHT = 0;
+    recipe.elms[1].leds.fields.MIDDLE_RIGHT = 0;
+    recipe.elms[1].leds.fields.LOWER_RIGHT_BACK = 0;
+    recipe.elms[1].leds.fields.LOWER_RIGHT_FRONT = 0;
+
+    recipe.elms[1].leds.fields.UPPER_FRONT = 0;
+    recipe.elms[1].leds.fields.MIDDLE_FRONT = 0;
+    recipe.elms[1].leds.fields.LOWER_FRONT_RIGHT = 0;
+    recipe.elms[1].leds.fields.LOWER_FRONT_LEFT = 0;
+
+    recipe.elms[2].time_ms = 150;
+    recipe.elms[2].prescale = recipe.elms[2].time_ms / 2;
+    
+    recipe.elms[2].leds.fields.UPPER_LEFT = 0;
+    recipe.elms[2].leds.fields.MIDDLE_LEFT = 1;
+    recipe.elms[2].leds.fields.LOWER_LEFT_FRONT = 0;
+    recipe.elms[2].leds.fields.LOWER_LEFT_BACK = 0;
+
+    recipe.elms[2].leds.fields.UPPER_BACK = 1;
+    recipe.elms[2].leds.fields.MIDDLE_BACK = 0;
+    recipe.elms[2].leds.fields.LOWER_BACK_LEFT = 0;
+    recipe.elms[2].leds.fields.LOWER_BACK_RIGHT = 0;
+
+    recipe.elms[2].leds.fields.UPPER_RIGHT = 0;
+    recipe.elms[2].leds.fields.MIDDLE_RIGHT = 0;
+    recipe.elms[2].leds.fields.LOWER_RIGHT_BACK = 0;
+    recipe.elms[2].leds.fields.LOWER_RIGHT_FRONT = 0;
+
+    recipe.elms[2].leds.fields.UPPER_FRONT = 0;
+    recipe.elms[2].leds.fields.MIDDLE_FRONT = 0;
+    recipe.elms[2].leds.fields.LOWER_FRONT_RIGHT = 0;
+    recipe.elms[2].leds.fields.LOWER_FRONT_LEFT = 0;
+
+    recipe.elms[3].time_ms = 150;
+    recipe.elms[3].prescale = recipe.elms[3].time_ms / 2;
+    
+    recipe.elms[3].leds.fields.UPPER_LEFT = 0;
+    recipe.elms[3].leds.fields.MIDDLE_LEFT = 0;
+    recipe.elms[3].leds.fields.LOWER_LEFT_FRONT = 1;
+    recipe.elms[3].leds.fields.LOWER_LEFT_BACK = 0;
+
+    recipe.elms[3].leds.fields.UPPER_BACK = 0;
+    recipe.elms[3].leds.fields.MIDDLE_BACK = 1;
+    recipe.elms[3].leds.fields.LOWER_BACK_LEFT = 0;
+    recipe.elms[3].leds.fields.LOWER_BACK_RIGHT = 0;
+
+    recipe.elms[3].leds.fields.UPPER_RIGHT = 1;
+    recipe.elms[3].leds.fields.MIDDLE_RIGHT = 0;
+    recipe.elms[3].leds.fields.LOWER_RIGHT_BACK = 0;
+    recipe.elms[3].leds.fields.LOWER_RIGHT_FRONT = 0;
+
+    recipe.elms[3].leds.fields.UPPER_FRONT = 0;
+    recipe.elms[3].leds.fields.MIDDLE_FRONT = 0;
+    recipe.elms[3].leds.fields.LOWER_FRONT_RIGHT = 0;
+    recipe.elms[3].leds.fields.LOWER_FRONT_LEFT = 0;
+
+    recipe.elms[4].time_ms = 150;
+    recipe.elms[4].prescale = recipe.elms[4].time_ms / 2;
+    
+    recipe.elms[4].leds.fields.UPPER_LEFT = 0;
+    recipe.elms[4].leds.fields.MIDDLE_LEFT = 0;
+    recipe.elms[4].leds.fields.LOWER_LEFT_FRONT = 0;
+    recipe.elms[4].leds.fields.LOWER_LEFT_BACK = 0;
+
+    recipe.elms[4].leds.fields.UPPER_BACK = 0;
+    recipe.elms[4].leds.fields.MIDDLE_BACK = 0;
+    recipe.elms[4].leds.fields.LOWER_BACK_LEFT = 1;
+    recipe.elms[4].leds.fields.LOWER_BACK_RIGHT = 0;
+
+    recipe.elms[4].leds.fields.UPPER_RIGHT = 0;
+    recipe.elms[4].leds.fields.MIDDLE_RIGHT = 1;
+    recipe.elms[4].leds.fields.LOWER_RIGHT_BACK = 0;
+    recipe.elms[4].leds.fields.LOWER_RIGHT_FRONT = 0;
+
+    recipe.elms[4].leds.fields.UPPER_FRONT = 1;
+    recipe.elms[4].leds.fields.MIDDLE_FRONT = 0;
+    recipe.elms[4].leds.fields.LOWER_FRONT_RIGHT = 0;
+    recipe.elms[4].leds.fields.LOWER_FRONT_LEFT = 0;
+
+    recipe.elms[5].time_ms = 150;
+    recipe.elms[5].prescale = recipe.elms[5].time_ms / 2;
+    
+    recipe.elms[5].leds.fields.UPPER_LEFT = 1;
+    recipe.elms[5].leds.fields.MIDDLE_LEFT = 0;
+    recipe.elms[5].leds.fields.LOWER_LEFT_FRONT = 0;
+    recipe.elms[5].leds.fields.LOWER_LEFT_BACK = 0;
+
+    recipe.elms[5].leds.fields.UPPER_BACK = 0;
+    recipe.elms[5].leds.fields.MIDDLE_BACK = 0;
+    recipe.elms[5].leds.fields.LOWER_BACK_LEFT = 0;
+    recipe.elms[5].leds.fields.LOWER_BACK_RIGHT = 0;
+
+    recipe.elms[5].leds.fields.UPPER_RIGHT = 0;
+    recipe.elms[5].leds.fields.MIDDLE_RIGHT = 0;
+    recipe.elms[5].leds.fields.LOWER_RIGHT_BACK = 1;
+    recipe.elms[5].leds.fields.LOWER_RIGHT_FRONT = 0;
+
+    recipe.elms[5].leds.fields.UPPER_FRONT = 0;
+    recipe.elms[5].leds.fields.MIDDLE_FRONT = 1;
+    recipe.elms[5].leds.fields.LOWER_FRONT_RIGHT = 0;
+    recipe.elms[5].leds.fields.LOWER_FRONT_LEFT = 0;
+
+    recipe.elms[6].time_ms = 150;
+    recipe.elms[6].prescale = recipe.elms[6].time_ms / 2;
+    
+    recipe.elms[6].leds.fields.UPPER_LEFT = 0;
+    recipe.elms[6].leds.fields.MIDDLE_LEFT = 1;
+    recipe.elms[6].leds.fields.LOWER_LEFT_FRONT = 0;
+    recipe.elms[6].leds.fields.LOWER_LEFT_BACK = 0;
+
+    recipe.elms[6].leds.fields.UPPER_BACK = 1;
+    recipe.elms[6].leds.fields.MIDDLE_BACK = 0;
+    recipe.elms[6].leds.fields.LOWER_BACK_LEFT = 0;
+    recipe.elms[6].leds.fields.LOWER_BACK_RIGHT = 0;
+
+    recipe.elms[6].leds.fields.UPPER_RIGHT = 0;
+    recipe.elms[6].leds.fields.MIDDLE_RIGHT = 0;
+    recipe.elms[6].leds.fields.LOWER_RIGHT_BACK = 0;
+    recipe.elms[6].leds.fields.LOWER_RIGHT_FRONT = 0;
+
+    recipe.elms[6].leds.fields.UPPER_FRONT = 0;
+    recipe.elms[6].leds.fields.MIDDLE_FRONT = 0;
+    recipe.elms[6].leds.fields.LOWER_FRONT_RIGHT = 1;
+    recipe.elms[6].leds.fields.LOWER_FRONT_LEFT = 0;
+
+    recipe.elms[7].time_ms = 150;
+    recipe.elms[7].prescale = recipe.elms[7].time_ms / 2;
+    
+    recipe.elms[7].leds.fields.UPPER_LEFT = 0;
+    recipe.elms[7].leds.fields.MIDDLE_LEFT = 0;
+    recipe.elms[7].leds.fields.LOWER_LEFT_FRONT = 0;
+    recipe.elms[7].leds.fields.LOWER_LEFT_BACK = 1;
+
+    recipe.elms[7].leds.fields.UPPER_BACK = 0;
+    recipe.elms[7].leds.fields.MIDDLE_BACK = 1;
+    recipe.elms[7].leds.fields.LOWER_BACK_LEFT = 0;
+    recipe.elms[7].leds.fields.LOWER_BACK_RIGHT = 0;
+
+    recipe.elms[7].leds.fields.UPPER_RIGHT = 1;
+    recipe.elms[7].leds.fields.MIDDLE_RIGHT = 0;
+    recipe.elms[7].leds.fields.LOWER_RIGHT_BACK = 0;
+    recipe.elms[7].leds.fields.LOWER_RIGHT_FRONT = 0;
+
+    recipe.elms[7].leds.fields.UPPER_FRONT = 0;
+    recipe.elms[7].leds.fields.MIDDLE_FRONT = 0;
+    recipe.elms[7].leds.fields.LOWER_FRONT_RIGHT = 0;
+    recipe.elms[7].leds.fields.LOWER_FRONT_LEFT = 0;
+
+    recipe.elms[8].time_ms = 150;
+    recipe.elms[8].prescale = recipe.elms[8].time_ms / 2;
+    
+    recipe.elms[8].leds.fields.UPPER_LEFT = 0;
+    recipe.elms[8].leds.fields.MIDDLE_LEFT = 0;
+    recipe.elms[8].leds.fields.LOWER_LEFT_FRONT = 0;
+    recipe.elms[8].leds.fields.LOWER_LEFT_BACK = 0;
+
+    recipe.elms[8].leds.fields.UPPER_BACK = 0;
+    recipe.elms[8].leds.fields.MIDDLE_BACK = 0;
+    recipe.elms[8].leds.fields.LOWER_BACK_LEFT = 0;
+    recipe.elms[8].leds.fields.LOWER_BACK_RIGHT = 1;
+
+    recipe.elms[8].leds.fields.UPPER_RIGHT = 0;
+    recipe.elms[8].leds.fields.MIDDLE_RIGHT = 1;
+    recipe.elms[8].leds.fields.LOWER_RIGHT_BACK = 0;
+    recipe.elms[8].leds.fields.LOWER_RIGHT_FRONT = 0;
+
+    recipe.elms[8].leds.fields.UPPER_FRONT = 1;
+    recipe.elms[8].leds.fields.MIDDLE_FRONT = 0;
+    recipe.elms[8].leds.fields.LOWER_FRONT_RIGHT = 0;
+    recipe.elms[8].leds.fields.LOWER_FRONT_LEFT = 0;
+
+    recipe.elms[9].time_ms = 150;
+    recipe.elms[9].prescale = recipe.elms[9].time_ms / 2;
+    
+    recipe.elms[9].leds.fields.UPPER_LEFT = 0;
+    recipe.elms[9].leds.fields.MIDDLE_LEFT = 0;
+    recipe.elms[9].leds.fields.LOWER_LEFT_FRONT = 0;
+    recipe.elms[9].leds.fields.LOWER_LEFT_BACK = 0;
+
+    recipe.elms[9].leds.fields.UPPER_BACK = 0;
+    recipe.elms[9].leds.fields.MIDDLE_BACK = 0;
+    recipe.elms[9].leds.fields.LOWER_BACK_LEFT = 0;
+    recipe.elms[9].leds.fields.LOWER_BACK_RIGHT = 1;
+
+    recipe.elms[9].leds.fields.UPPER_RIGHT = 0;
+    recipe.elms[9].leds.fields.MIDDLE_RIGHT = 1;
+    recipe.elms[9].leds.fields.LOWER_RIGHT_BACK = 0;
+    recipe.elms[9].leds.fields.LOWER_RIGHT_FRONT = 0;
+
+    recipe.elms[9].leds.fields.UPPER_FRONT = 1;
+    recipe.elms[9].leds.fields.MIDDLE_FRONT = 0;
+    recipe.elms[9].leds.fields.LOWER_FRONT_RIGHT = 0;
+    recipe.elms[9].leds.fields.LOWER_FRONT_LEFT = 0;
+
+    recipe.elms[10].time_ms = 150;
+    recipe.elms[10].prescale = recipe.elms[10].time_ms / 2;
+    
+    recipe.elms[10].leds.fields.UPPER_LEFT = 0;
+    recipe.elms[10].leds.fields.MIDDLE_LEFT = 0;
+    recipe.elms[10].leds.fields.LOWER_LEFT_FRONT = 0;
+    recipe.elms[10].leds.fields.LOWER_LEFT_BACK = 0;
+
+    recipe.elms[10].leds.fields.UPPER_BACK = 0;
+    recipe.elms[10].leds.fields.MIDDLE_BACK = 0;
+    recipe.elms[10].leds.fields.LOWER_BACK_LEFT = 0;
+    recipe.elms[10].leds.fields.LOWER_BACK_RIGHT = 0;
+
+    recipe.elms[10].leds.fields.UPPER_RIGHT = 0;
+    recipe.elms[10].leds.fields.MIDDLE_RIGHT = 0;
+    recipe.elms[10].leds.fields.LOWER_RIGHT_BACK = 0;
+    recipe.elms[10].leds.fields.LOWER_RIGHT_FRONT = 1;
+
+    recipe.elms[10].leds.fields.UPPER_FRONT = 0;
+    recipe.elms[10].leds.fields.MIDDLE_FRONT = 1;
+    recipe.elms[10].leds.fields.LOWER_FRONT_RIGHT = 0;
+    recipe.elms[10].leds.fields.LOWER_FRONT_LEFT = 0;
+
+    recipe.elms[11].time_ms = 150;
+    recipe.elms[11].prescale = recipe.elms[11].time_ms / 2;
+    
+    recipe.elms[11].leds.fields.UPPER_LEFT = 0;
+    recipe.elms[11].leds.fields.MIDDLE_LEFT = 0;
+    recipe.elms[11].leds.fields.LOWER_LEFT_FRONT = 0;
+    recipe.elms[11].leds.fields.LOWER_LEFT_BACK = 0;
+
+    recipe.elms[11].leds.fields.UPPER_BACK = 0;
+    recipe.elms[11].leds.fields.MIDDLE_BACK = 0;
+    recipe.elms[11].leds.fields.LOWER_BACK_LEFT = 0;
+    recipe.elms[11].leds.fields.LOWER_BACK_RIGHT = 0;
+
+    recipe.elms[11].leds.fields.UPPER_RIGHT = 0;
+    recipe.elms[11].leds.fields.MIDDLE_RIGHT = 0;
+    recipe.elms[11].leds.fields.LOWER_RIGHT_BACK = 0;
+    recipe.elms[11].leds.fields.LOWER_RIGHT_FRONT = 0;
+
+    recipe.elms[11].leds.fields.UPPER_FRONT = 0;
+    recipe.elms[11].leds.fields.MIDDLE_FRONT = 0;
+    recipe.elms[11].leds.fields.LOWER_FRONT_RIGHT = 0;
+    recipe.elms[11].leds.fields.LOWER_FRONT_LEFT = 1;
+
+    recipe.elms[12].time_ms = 150;
+    recipe.elms[12].prescale = recipe.elms[12].time_ms / 2;
+    
+    recipe.elms[12].leds.fields.UPPER_LEFT = 0;
+    recipe.elms[12].leds.fields.MIDDLE_LEFT = 0;
+    recipe.elms[12].leds.fields.LOWER_LEFT_FRONT = 0;
+    recipe.elms[12].leds.fields.LOWER_LEFT_BACK = 0;
+
+    recipe.elms[12].leds.fields.UPPER_BACK = 0;
+    recipe.elms[12].leds.fields.MIDDLE_BACK = 0;
+    recipe.elms[12].leds.fields.LOWER_BACK_LEFT = 0;
+    recipe.elms[12].leds.fields.LOWER_BACK_RIGHT = 0;
+
+    recipe.elms[12].leds.fields.UPPER_RIGHT = 0;
+    recipe.elms[12].leds.fields.MIDDLE_RIGHT = 0;
+    recipe.elms[12].leds.fields.LOWER_RIGHT_BACK = 0;
+    recipe.elms[12].leds.fields.LOWER_RIGHT_FRONT = 0;
+
+    recipe.elms[12].leds.fields.UPPER_FRONT = 0;
+    recipe.elms[12].leds.fields.MIDDLE_FRONT = 0;
+    recipe.elms[12].leds.fields.LOWER_FRONT_RIGHT = 0;
+    recipe.elms[12].leds.fields.LOWER_FRONT_LEFT = 0;
+
+    recipe.elms[13].time_ms = 500;
+    recipe.elms[13].prescale = recipe.elms[13].time_ms / 2;
+    
+    recipe.elms[13].leds.fields.UPPER_LEFT = 0;
+    recipe.elms[13].leds.fields.MIDDLE_LEFT = 0;
+    recipe.elms[13].leds.fields.LOWER_LEFT_FRONT = 0;
+    recipe.elms[13].leds.fields.LOWER_LEFT_BACK = 0;
+
+    recipe.elms[13].leds.fields.UPPER_BACK = 0;
+    recipe.elms[13].leds.fields.MIDDLE_BACK = 0;
+    recipe.elms[13].leds.fields.LOWER_BACK_LEFT = 0;
+    recipe.elms[13].leds.fields.LOWER_BACK_RIGHT = 0;
+
+    recipe.elms[13].leds.fields.UPPER_RIGHT = 0;
+    recipe.elms[13].leds.fields.MIDDLE_RIGHT = 0;
+    recipe.elms[13].leds.fields.LOWER_RIGHT_BACK = 0;
+    recipe.elms[13].leds.fields.LOWER_RIGHT_FRONT = 0;
+
+    recipe.elms[13].leds.fields.UPPER_FRONT = 1;
+    recipe.elms[13].leds.fields.MIDDLE_FRONT = 1;
+    recipe.elms[13].leds.fields.LOWER_FRONT_RIGHT = 1;
+    recipe.elms[13].leds.fields.LOWER_FRONT_LEFT = 1;
+
+    recipe.elms[14].time_ms = 500;
+    recipe.elms[14].prescale = recipe.elms[14].time_ms / 2;
+    
+    recipe.elms[14].leds.fields.UPPER_LEFT = 1;
+    recipe.elms[14].leds.fields.MIDDLE_LEFT = 1;
+    recipe.elms[14].leds.fields.LOWER_LEFT_FRONT = 1;
+    recipe.elms[14].leds.fields.LOWER_LEFT_BACK = 1;
+
+    recipe.elms[14].leds.fields.UPPER_BACK = 0;
+    recipe.elms[14].leds.fields.MIDDLE_BACK = 0;
+    recipe.elms[14].leds.fields.LOWER_BACK_LEFT = 0;
+    recipe.elms[14].leds.fields.LOWER_BACK_RIGHT = 0;
+
+    recipe.elms[14].leds.fields.UPPER_RIGHT = 0;
+    recipe.elms[14].leds.fields.MIDDLE_RIGHT = 0;
+    recipe.elms[14].leds.fields.LOWER_RIGHT_BACK = 0;
+    recipe.elms[14].leds.fields.LOWER_RIGHT_FRONT = 0;
+
+    recipe.elms[14].leds.fields.UPPER_FRONT = 0;
+    recipe.elms[14].leds.fields.MIDDLE_FRONT = 0;
+    recipe.elms[14].leds.fields.LOWER_FRONT_RIGHT = 0;
+    recipe.elms[14].leds.fields.LOWER_FRONT_LEFT = 0;
+
+    recipe.elms[15].time_ms = 500;
+    recipe.elms[15].prescale = recipe.elms[15].time_ms / 2;
+    
+    recipe.elms[15].leds.fields.UPPER_LEFT = 0;
+    recipe.elms[15].leds.fields.MIDDLE_LEFT = 0;
+    recipe.elms[15].leds.fields.LOWER_LEFT_FRONT = 0;
+    recipe.elms[15].leds.fields.LOWER_LEFT_BACK = 0;
+
+    recipe.elms[15].leds.fields.UPPER_BACK = 1;
+    recipe.elms[15].leds.fields.MIDDLE_BACK = 1;
+    recipe.elms[15].leds.fields.LOWER_BACK_LEFT = 1;
+    recipe.elms[15].leds.fields.LOWER_BACK_RIGHT = 1;
+
+    recipe.elms[15].leds.fields.UPPER_RIGHT = 0;
+    recipe.elms[15].leds.fields.MIDDLE_RIGHT = 0;
+    recipe.elms[15].leds.fields.LOWER_RIGHT_BACK = 0;
+    recipe.elms[15].leds.fields.LOWER_RIGHT_FRONT = 0;
+
+    recipe.elms[15].leds.fields.UPPER_FRONT = 0;
+    recipe.elms[15].leds.fields.MIDDLE_FRONT = 0;
+    recipe.elms[15].leds.fields.LOWER_FRONT_RIGHT = 0;
+    recipe.elms[15].leds.fields.LOWER_FRONT_LEFT = 0;
+
+    recipe.elms[16].time_ms = 500;
+    recipe.elms[16].prescale = recipe.elms[16].time_ms / 2;
+    
+    recipe.elms[16].leds.fields.UPPER_LEFT = 0;
+    recipe.elms[16].leds.fields.MIDDLE_LEFT = 0;
+    recipe.elms[16].leds.fields.LOWER_LEFT_FRONT = 0;
+    recipe.elms[16].leds.fields.LOWER_LEFT_BACK = 0;
+
+    recipe.elms[16].leds.fields.UPPER_BACK = 0;
+    recipe.elms[16].leds.fields.MIDDLE_BACK = 0;
+    recipe.elms[16].leds.fields.LOWER_BACK_LEFT = 0;
+    recipe.elms[16].leds.fields.LOWER_BACK_RIGHT = 0;
+
+    recipe.elms[16].leds.fields.UPPER_RIGHT = 1;
+    recipe.elms[16].leds.fields.MIDDLE_RIGHT = 1;
+    recipe.elms[16].leds.fields.LOWER_RIGHT_BACK = 1;
+    recipe.elms[16].leds.fields.LOWER_RIGHT_FRONT = 1;
+
+    recipe.elms[16].leds.fields.UPPER_FRONT = 0;
+    recipe.elms[16].leds.fields.MIDDLE_FRONT = 0;
+    recipe.elms[16].leds.fields.LOWER_FRONT_RIGHT = 0;
+    recipe.elms[16].leds.fields.LOWER_FRONT_LEFT = 0;
+
+    recipe.elms[17].time_ms = 250;
+    recipe.elms[17].prescale = recipe.elms[17].time_ms / 2;
+    recipe.elms[17].leds.reg = 0x0000;
+
+    recipe.elms[18].time_ms = 250;
+    recipe.elms[18].prescale = recipe.elms[18].time_ms / 2;
+    recipe.elms[18].leds.reg = 0xFFFF;
+
+    recipe.elms[19].time_ms = 250;
+    recipe.elms[19].prescale = recipe.elms[19].time_ms / 2;
+    recipe.elms[19].leds.reg = 0x0000;
+
+    recipe.elms[20].time_ms = 250;
+    recipe.elms[20].prescale = recipe.elms[20].time_ms / 2;
+    recipe.elms[20].leds.reg = 0xFFFF;
+
+    recipe.elms[21].time_ms = 250;
+    recipe.elms[21].prescale = recipe.elms[21].time_ms / 2;
+    recipe.elms[21].leds.reg = 0x0000;
+
+    recipe.elms[22].time_ms = 250;
+    recipe.elms[22].prescale = recipe.elms[22].time_ms / 2;
+    recipe.elms[22].leds.reg = 0xFFFF;
+
+    recipe.elms[23].time_ms = 250;
+    recipe.elms[23].prescale = recipe.elms[23].time_ms / 2;
+    recipe.elms[23].leds.reg = 0x0000;
+
+    return recipe;
+}

@@ -17,4 +17,12 @@
 #define TIMER3      ((TIMER_TypeDef *)TIMER3_BASE)
 #define NVIC        ((NVIC_TypeDef *)NVIC_BASE)
 
+typedef union innerprocess_typedef {
+    volatile u16 reg;
+    struct {
+        volatile u16 TRIGGER     :1;
+        volatile u16 COUNT      :15;
+    } fields;
+} INNERProcess_TypeDef;
+
 #endif /* MAIN_H_ */

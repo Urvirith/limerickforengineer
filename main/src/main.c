@@ -1,6 +1,8 @@
 /* Main Entry Of Program */
 #include "main.h"
 
+INNERProcess_TypeDef ip;
+
 /* Extern Keyword Allows To Be Call */
 extern void SystemInit() {
     rcc_write_iopenr(RCC, RCC_GPIOA_IOPENR);        // ENABLE GPIOA
@@ -11,6 +13,7 @@ extern void SystemInit() {
 }
 
 extern void main() {
+    ip.reg = 0;
     /* GPIO Setup */
     gpio_type(GPIOC, LED_GRN_PIN, Gpio_Output, Gpio_Push_Pull, AF0);
     led_setup();
@@ -33,10 +36,21 @@ extern void main() {
     LED_Recipe_TypeDef recipe = led_template();
 
     u8 i = 0;
+    u16 trigger = 0;
 
     while (1) {
         if (i >= recipe.cnt) {
             i = 0;
+
+            if (trigger != ip.fields.TRIGGER) {
+                if (ip.fields.TRIGGER) {
+                    recipe = led_rain_fall();
+                } else {
+                    recipe = led_template();
+                }
+
+                trigger = ip.fields.TRIGGER;
+            }
         }
 
         timer_set_time(TIMER2, recipe.elms[i].time_ms, 16000, recipe.elms[i].prescale);
@@ -57,6 +71,18 @@ extern void main() {
 extern void TIM3_IRQHandler() {
     timer_clr_flag(TIMER3);
     sr_ptr_vol_bit_u32(&GPIOC->ODR, LED_GRN);
+
+    if (ip.fields.COUNT >= 60) {
+        ip.fields.COUNT = 0;
+        if (ip.fields.TRIGGER) {
+            ip.fields.TRIGGER = 0;
+        } else {
+            ip.fields.TRIGGER = 1;
+        }
+    }
+
+    ip.fields.COUNT += 1;
+
     timer_start(TIMER3);
 }
 
