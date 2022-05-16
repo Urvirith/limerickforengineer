@@ -72,7 +72,7 @@ extern void TIM3_IRQHandler() {
     timer_clr_flag(TIMER3);
     sr_ptr_vol_bit_u32(&GPIOC->ODR, LED_GRN);
 
-    if (ip.fields.COUNT >= 60) {
+    if (ip.fields.COUNT >= 30) {
         ip.fields.COUNT = 0;
         if (ip.fields.TRIGGER) {
             ip.fields.TRIGGER = 0;
